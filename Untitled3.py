@@ -149,6 +149,22 @@ plt.xlabel('Age')
 plt.ylabel('Number of Customers')
 plt.show()
 
+# Plot the age distribution of these customers
+plt.figure(figsize=(10, 6))
+plt.hist(no_income_df['age'], bins=20, color='skyblue', edgecolor='black')
+plt.title('Age Distribution of Customers with No Annual Income')
+plt.xlabel('Age')
+plt.ylabel('Number of Customers')
+plt.show()
+
+# Pie chart for marital status of customers with no annual income
+marital_counts = no_income_df['marital'].value_counts()
+plt.figure(figsize=(8, 8))
+plt.pie(marital_counts, labels=marital_counts.index, autopct='%1.1f%%', startangle=140, colors=plt.cm.Pastel1.colors)
+plt.title('Marital Status Distribution (No Annual Income)')
+plt.axis('equal')
+plt.show()
+# ...existing code...martial')
 
 # In[15]:
 
